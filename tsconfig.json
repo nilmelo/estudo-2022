@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    /* Language and Environment */
+    "target": "es2016",
+    "lib": ["es6"],
+    /* Modules */
+    "module": "commonjs",
+    "rootDir": "src",
+    "baseUrl": "./",
+    "paths": {
+      "@config/*": ["src/config/*"],
+      "@modules/*": ["src/modules/*"],
+      "@shared/*": ["src/shared/*"]
+    },
+    "resolveJsonModule": true,
+    /* JavaScript Support */
+    "allowJs": true,
+    "outDir": "build",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    /* Type Checking */
+    "strict": true,
+    "noImplicitAny": true,
+    "skipLibCheck": true
+  }
+}

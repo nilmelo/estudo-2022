@@ -1,0 +1,32 @@
+{
+  "name": "estudo-2022",
+  "version": "1.0.0",
+  "description": "Projeto para treinamento de criação API RESTFUL",
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "express-async-errors": "^3.1.1",
+    "ts-node-dev": "^1.1.8",
+    "tsconfig-paths": "^3.14.1",
+    "typescript": "^4.6.4"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.12",
+    "@types/express": "^4.17.13"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "ts-node-dev -r tsconfig-paths/register --inspect --transpile-only --ignore-watch node_modules src/shared/http/server.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nilmelo/estudo-2022.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nilmelo/estudo-2022/issues"
+  },
+  "homepage": "https://github.com/nilmelo/estudo-2022#readme"
+}
