@@ -1,11 +1,26 @@
-import express from 'express';
+import express, { NextFunction, Request, Response } from 'express';
 import cors from 'cors';
 import routes from './routes';
+import AppError from '@shared/errors/AppError';
 
 const app = express();
 
 app.use(cors());
 app.use(express.json());
+app.use((error: Error, request: Request, response: Response, next: NextFunction) => {
+    let errorCode = error instanceof AppError ? error.statusCode : 500;
+    let message = 'Internal server error';
+
+    if(error instanceof AppError){
+        errorCode = error.statusCode;
+        message = error.message;
+    }
+
+    return response.status(errorCode).json({
+        status: 'error',
+        message: message
+    });
+});
 
 app.use(routes);
 
