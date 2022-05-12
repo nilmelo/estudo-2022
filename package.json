@@ -21,7 +21,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "ts-node-dev -r tsconfig-paths/register --inspect --transpile-only --ignore-watch node_modules src/shared/http/server.ts",
-    "typeorm": "ts-node-dev ./node_modules/typeorm/cli.js"
+    "typeorm": "ts-node -r tsconfig-paths/register ./node_modules/.bin/typeorm",
+    "migration:generate": "npm run typeorm migration:generate -- -n"
   },
   "repository": {
     "type": "git",
