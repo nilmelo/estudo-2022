@@ -4,6 +4,8 @@
   "description": "Projeto para treinamento de criação API RESTFUL",
   "main": "index.js",
   "dependencies": {
+    "@types/bcrypt": "^5.0.0",
+    "bcrypt": "^5.0.1",
     "cors": "^2.8.5",
     "express": "^4.18.1",
     "express-async-errors": "^3.1.1",
